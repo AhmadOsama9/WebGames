@@ -1,0 +1,100 @@
+:root {
+    --primary-color: rgb(38, 38, 255);
+    --secondary-color: #011011;
+    --bg-color: #011011;
+    --bg-header-color: rgb(49, 41, 41);
+
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+  
+body {
+    background: var(--bg-color);
+}
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+    height: 5%;
+    position: fixed;
+    background: var(--bg-header-color);
+    padding: 0.5rem;
+}
+  
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: clamp(0.3rem, 0.5rem + 5vw, 1.5rem);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav{
+    font-size: clamp(0.2rem, 0.5rem + 3vw, 1.5rem);
+    color: var(--secondary-color);
+}
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--primary-color);
+    padding-top: 10vh;
+}
+.list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    width: 80%;
+}
+  
+.list li {
+    list-style: none;
+    padding: clamp(0.3rem, 0.5rem + 2vw, 1rem);
+    margin: clamp(0.3rem, 2rem + 2vw, 1rem);
+    font-size: clamp(0.2rem, 0.5rem + 3vw, 1.5rem);
+    background: var(--bg-header-color);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    width: 80%;
+    border: 2px solid #2634f1;
+    position: relative;
+    z-index: 1;
+}
+
+.list li a:hover{
+    color: #f4f4f4;
+}
+
+span{
+    background: var(--primary-color);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+li:hover span{
+    width: 100%;
+}
+
+li:hover{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
